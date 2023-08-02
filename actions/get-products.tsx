@@ -7,7 +7,7 @@ interface Query {
   categoryId?: string;
   colorId?: string;
   sizeId?: string;
-  isFeatured: boolean;
+  isFeatured?: boolean;
 }
 
 export default async function getProducts(query: Query): Promise<Product[]> {
@@ -21,7 +21,7 @@ export default async function getProducts(query: Query): Promise<Product[]> {
     }
   })
 
-  const response = await fetch(URL, {next: { revalidate: 0 }});
+  const response = await fetch(url, {next: { revalidate: 0 }});
 
   return response.json();
 }
