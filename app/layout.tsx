@@ -9,7 +9,7 @@ import { Urbanist } from 'next/font/google'
 import './globals.css'
 import ToastProvider from '@/providers/toast-provider'
 
-const font = Urbanist({ subsets: ['latin'] })
+const font = Urbanist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Store',

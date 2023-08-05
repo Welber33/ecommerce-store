@@ -5,6 +5,7 @@ import Billboard from "@/components/billboard";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
 
+
 export default async function HomePage() {
   const products = await getProducts({ isFeatured: true })
   const billboard = await getBillboard("9df9283a-07d7-4d29-8249-6cef8f5f41bd");
